@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Статьи{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1>Добавление статьи</h1>
+        <form action="POST">
+            <div class="mb-3">
+                <label class="form-label">Загловок</label>
+                <input type="text" name="title", id="title" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Интро</label>
+                <textarea name="intro" id="intro" class="form-control"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Сам текст</label>
+                <textarea name="text" id="text" class="form-control"></textarea>
+            </div>
+            <input type="submit" class="btn btn-success" value="Отправить">
+        </form>
+    </div>
+{% endblock %}

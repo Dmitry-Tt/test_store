@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<div class="container">
+<div class="container my-5">
     {% with messages = get_flashed_messages() %}
         {% if messages %}
         <div class="alert alert-warning" role="alert">
@@ -11,5 +11,82 @@
         </div>
         {% endif %}
     {% endwith %}
+    <div class="row">
+        <h1 class="text-center text-secondary my-5">Сarousel, carousel ...!</h1>
+    </div>
+    <main>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="static\images\slide1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Метка первого слайда</h5>
+                  <p>Некоторый репрезентативный заполнитель для первого слайда.</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="static\images\slide2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Метка второго слайда</h5>
+                  <p>Некоторый репрезентативный заполнитель для второго слайда.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="static\images\slide3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Метка третьего слайда</h5>
+                  <p>Некоторый репрезентативный заполнитель для третьего слайда.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"  data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"  data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Следующий</span>
+            </button>
+        </div>        
+    
+        <div class="row featurette my-5">
+            <div class="col-md-7">
+            <h2 class="featurette-heading">Штучки, к которым тянутся ручки (Россия).</h2>
+            <p class="lead">Легкая и компактная сумка из прочной холщовой ткани - отличная замена одноразовым пластиковым пакетам.
+                Выдерживает большие нагрузки, рисунок не выцветает со временем и не линяет после стирки. Длина ручек позволяет носить сумку как в руке, так и на плече. 
+                Сумка смотрится гармонично с любым гардеробом.
+            </p>
+            </div>
+            <div class="col-md-5">
+                <img src="static\images\5546_big.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        
+        <hr class="featurette-divider">
+    
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Ах да, это так удобно.</h2>
+            <p class="lead">Сумка шоппер для покупок - достойная альтернатива бумажным и полиэтиленовым пакетам.
+                Шопперы можно носить в любом возрасте и практически с любой одеждой. Они также могут заменить вместительную сумку для работы, став практичным, стильным и очень удобным дополнением ежедневного гардероба, подойдут для пляжа и пикника. 
+                Шоппер всегда можно брать с собой, он легко складывается и не занимает много места</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="static\images\photo1.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row">
+            
+        </div>
+    </main>
 </div>
+
 {% endblock %}

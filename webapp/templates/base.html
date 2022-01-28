@@ -12,18 +12,20 @@
 <body>
     <div class="container">
         <header class="d-flex flex-wrap align-items-center justify-content-center navbar-light shadow py-3 mb-4 border-bottom">
-            <a class="navbar-brand text-success logo h1 col-md-3 mb-2 mb-md-0" href="/">online store</a>
+            <a class="navbar-brand text-success logo h1 col-md-3 mb-2 mb-md-0" href="/">Shopper Popper</a>
                     
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="/" class="nav-link px-2 link-dark">Главная страница</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark">Магазин</a></li>
+                <li><a href="https://www.wildberries.ru/seller/105415" class="nav-link px-2 link-dark">Магазин</a></li>
+                <li><a href="/gallery" class="nav-link px-2 link-dark">Коллекция</a></li>
                 <li><a href="/about" class="nav-link px-2 link-dark">О нас</a></li>
             </ul>
     
             <div class="col-md-3 text-end">
                 {% if current_user.is_authenticated %}
                     {% if current_user.is_admin %}
-                    <a class="btn btn-outline-success" href="{{ url_for('admin.admin_index') }}" role="button">Админка</a>      
+                    <a class="btn btn-outline-success" href="{{ url_for('admin.admin_index') }}" role="button">Админка</a>
+                    <a class="btn btn-outline-success" href="{{ url_for('article.create_article') }}" role="button">Создать статью</a>    
                     {% endif %}
                     <a class="btn btn-outline-success" href="{{ url_for('user.logout') }}" role="button">Выйти</a>      
                 {% else %}
@@ -35,20 +37,19 @@
     </div>
 
 {% block body %}{% endblock %}
-<nav class="fixed-bottom">
+
     <div class="container">
         <footer class="py-3 my-4">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-        </ul>
-        <p class="text-center text-muted">© 2022 Learn Python</p>
-        </footer>
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+            </ul>
+            <p class="text-center text-muted">© 2022 Company, Inc</p>
+          </footer>     
     </div>
-</nav>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </body>
 
